@@ -83,6 +83,40 @@ type error:
     
 */
 
-(function () {
-    console.log(10);
-})();
+// (function () {
+//     console.log(10);
+// })();
+
+// Constructor function
+
+function Person(name, age) {
+    this.name = name;
+    this.age = age;
+
+    this.print = function print() {
+        console.log(this.name);
+    };
+}
+
+const person1 = new Person("John", 25);
+console.log(person1); // { name: "John", age: 25, print : function print() {console.log(John)}}
+/*
+    function Person(name, age) {
+        this.name = name;
+        this.age = age;
+
+        this.print = function print() {
+            console.log(this.name);
+        };
+
+        this : {
+            name : this.name,
+            age : this.age,
+            this.print : function print() {
+                console.log(this.name);
+            };
+        }
+
+        return this;
+    }
+*/
